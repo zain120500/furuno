@@ -54,17 +54,16 @@
         </div>
 
         <div class="top-0 p-3">
-            <div class="grid grid-rows-5 gap-3">
-                <div class="font-semibold text-white"
-                        @click="scrollToSection('about')">About</div>
-                <div class="font-semibold text-white"
-                        @click="scrollToSection('product')">Product</div>
-                <div class="font-semibold text-white"
-                        @click="scrollToSection('service')">Service</div>
-                <div class="font-semibold text-white"
-                        @click="scrollToSection('certifPostel')">Sertifikat Postel</div>
-                <div class="font-semibold text-white"
-                        @click="scrollToSection('contact')">Contact</div>
+            <div class="grid grid-rows-5 gap-5 text-left mt-5">
+                <button class="font-semibold text-white hover:scale-125" @click="scrollToSection('about')">About</button>
+                <button class="font-semibold text-white hover:scale-125"
+                    @click="scrollToSection('product')">Product</button>
+                <button class="font-semibold text-white hover:scale-125"
+                    @click="scrollToSection('service')">Service</button>
+                <button class="font-semibold text-white hover:scale-125" @click="scrollToSection('certifPostel')">Sertifikat
+                    Postel</button>
+                <button class="font-semibold text-white hover:scale-125"
+                    @click="scrollToSection('contact')">Contact</button>
             </div>
         </div>
 
