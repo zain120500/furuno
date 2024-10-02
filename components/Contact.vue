@@ -1,6 +1,6 @@
 <template>
     <div class="background bg-gradient-to-r from-[#0B2F9F] to-[#161D6F] text-white py-3 px-5 sm:px-10 my-5 sm:text-xl">
-        <p id="contact" class="text-center m-5 font-bold text-2xl sm:text-3xl text-white animate-on-scroll">Hubungi Kami</p>
+        <h1 id="contact" class="text-center m-5 font-bold text-2xl sm:text-3xl text-white animate-on-scroll">Hubungi Kami</h1>
         <div class="grid grid-cols-2 sm:grid-cols-4 text-center">
             <div class="animate-on-scroll">
                 <Icon name="mdi:address-marker-outline" class="text-4xl sm:text-6xl text-white" />
@@ -25,17 +25,17 @@
                 <Icon name="material-symbols:mail-outline" class="text-4xl sm:text-6xl text-white" />
                 <br />
                 <p class="font-semibold text-white"><strong class="text-xl">E</strong>-mail</p>
-                <div class="sm:grid sm:grid-cols-2 sm:justify-center gap-1 ">
-                    <div class="text-sm sm:text-right">Marine Products :</div>
-                    <div class="text-sm sm:text-left">
+                <div class="lg:grid lg:grid-cols-2 lg:justify-center gap-1 ">
+                    <div class="text-sm lg:text-right">Marine Products :</div>
+                    <div class="text-sm lg:text-left">
                         <div>fid@furuno.id</div>
                         <div>sales@furuno.id</div>
                         <div>service@furuno.id</div>
                     </div>
                 </div>
-                <div class="mt-3 sm:mt-0 sm:grid sm:grid-cols-2 sm:justify-center gap-1 ">
-                    <div class="text-sm sm:text-right">Medical Products :</div>
-                    <div class="text-sm sm:text-left">Medical@furuno.id</div>
+                <div class="mt-3 lg:mt-0 lg:grid lg:grid-cols-2 lg:justify-center gap-1 ">
+                    <div class="text-sm lg:text-right">Medical Products :</div>
+                    <div class="text-sm lg:text-left">Medical@furuno.id</div>
                 </div>
             </div>
         </div>

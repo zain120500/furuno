@@ -1,6 +1,6 @@
 <template>
     <div class="background bg-gradient-to-r from-[#0B2F9F] to-[#161D6F] text-white py-3 px-5 sm:px-10 my-5 sm:text-xl">
-        <p id="product" class="text-center m-5 font-bold text-2xl sm:text-3xl text-white animate-on-scroll">Produk Kami</p>
+        <h1 id="product" class="text-center m-5 font-bold text-2xl sm:text-3xl text-white animate-on-scroll">Produk Kami</h1>
         <br />
         <div class=" animate-on-scroll my-3">
             <button class="btn btn-sm sm:btn-md text-lg hover:scale-125 hover:text-white hover:bg-[#3ABEF9]"

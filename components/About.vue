@@ -1,25 +1,25 @@
 <template>
     <div class="mx-3 sm:mx-10">
-        <p id="about" class="text-center m-10 font-bold text-2xl sm:text-3xl animate-on-scroll">Tentang Kami</p>
+        <h1 id="about" class="text-center m-10 font-bold text-2xl sm:text-3xl animate-on-scroll">Tentang Kami</h1>
 
-        <div class="sm:grid sm:grid-cols-2 sm:items-center">
+        <div class="sm:grid sm:grid-cols-2 sm:items-center gap-2">
             <div class="animate-on-scroll">
                 <img src="~/assets/image/logo.png" class="w-[400px] mx-auto my-3" />
-                <p class=" sm:text-2xl">
+                <p class=" md:text-xl lg:text-2xl">
                     <strong>PT FURUNO ELECTRIC INDONESIA</strong> didirikan pada Tahun 2016, sebagai anak perusahaan dari
                     <strong>FURUNO SINGAPORE PTE., LTD</strong> dan <strong>FURUNO ELECTRIC CO., LTD.</strong> untuk
                     meningkatkan
                     pelayanan dan mendukung kegiatan-kegiatan lokal secara professional sesuai dengan standar FURUNO Global.
                 </p>
             </div>
-            <img class=" sm:w-full rounded-2xl animate-on-scroll"
+            <img class="mx-auto w-80 md:w-full rounded-2xl animate-on-scroll"
                 src="~/assets/image/gambar1.jpg" alt="" />
         </div>
     </div>
 
     <div
-        class="background bg-gradient-to-r from-[#0B2F9F] to-[#161D6F] text-white py-3 px-5 sm:px-10 my-5 sm:text-xl animate-on-scroll">
-        <p class="text-white sm:text-xl">
+        class="background bg-gradient-to-r from-[#0B2F9F] to-[#161D6F] text-white py-3 px-5 sm:px-10 my-5 md:text-xl animate-on-scroll">
+        <p class="text-white md:text-xl">
             PT FURUNO ELECTRIC INDONESIA bergerak dibidang perdagangan besar untuk produk-produk elektronik kelautan MERK
             FURUNO
             yang meliputi:
@@ -35,13 +35,13 @@
     </div>
 
     <div class="mx-5 sm:mx-10 animate-on-scroll">
-      <p class="mt-3 text-center sm:text-xl">
+      <p class="mt-3 text-center md:text-xl">
         <strong class="text-[#0B2F9F]">PT FURUNO ELECTRIC INDONESIA</strong> berkomitmen untuk melayani konsumen dengan
         sepenuh hati, sesuai dengan motto kami, yaitu:
       </p>
       <p class="text-center text-3xl font-bold text-[#0B2F9F]">C A R E +</p>
   
-      <div class="sm:grid sm:grid-cols-5 text-center gap-2">
+      <div class="sm:grid sm:grid-cols-3 lg:grid-cols-5 text-center gap-2">
         <div>
           <Icon name="fluent:people-chat-20-filled" class="text-6xl text-[#0B2F9F]" />
           <br />

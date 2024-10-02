@@ -13,7 +13,7 @@
             <!-- <div class="mb-5 text-white font-bold text-6xl fade-in-delay">I  N  D  O  N  E  S  I  A</div> -->
 
             <!-- Paragraph Text -->
-            <div class="mb-5 text-white font-bold text-3xl sm:text-6xl fade-in-delay">Navigational Equipments For Marine Based</div>
+            <h1 class="mb-5 text-white font-bold text-3xl sm:text-6xl fade-in-delay">Navigational Equipments For Marine Based</h1>
             <p class="text-white text-xl sm:text-3xl font-light px-5 fade-in-delay">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                 dolore

@@ -1,7 +1,7 @@
 <template>
     <div class="mx-5 sm:mx-10">
-        <p id="service" class="text-center m-5 font-bold text-2xl sm:text-3xl animate-on-scroll">Layanan Kami</p>
-        <div class="sm:grid sm:grid-cols-3 gap-2">
+        <h1 id="service" class="text-center m-5 font-bold text-2xl sm:text-3xl animate-on-scroll">Layanan Kami</h1>
+        <div class="sm:grid md:grid-cols-3 gap-2">
             <div class="animate-on-scroll my-3 sm:my-0">
                 <div class="text-center">
                     <Icon name="ep:sell" class="text-4xl sm:text-6xl text-[#0B2F9F]" />

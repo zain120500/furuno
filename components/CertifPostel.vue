@@ -1,8 +1,8 @@
 <template>
     <div class="background bg-slate-200 py-3 px-5 sm:px-10 my-5 text-xl">
-        <p id="certifPostel" class="text-center m-5 font-bold text-2xl sm:text-3xl animate-on-scroll">
+        <h1 id="certifPostel" class="text-center m-5 font-bold text-2xl sm:text-3xl animate-on-scroll">
             Sertifikasi POSTEL
-        </p>
+        </h1>
         <br />
         <p class="animate-on-scroll">
             Berdasarkan Peraturan Menteri Komunikasi dan Informatika No. 5 Tahun 2013, Tentang Kelompok Alat dan Perangkat
@@ -35,9 +35,9 @@
             memenuhi kewajiban sesuai dengan peraturan perundang-undangan yang berlaku di wilayah hukum Republik Indonesia.
         </p>
 
-        <p class="text-center m-5 font-bold text-2xl sm:text-3xl animate-on-scroll">
+        <h2 class="text-center m-5 font-bold text-2xl sm:text-3xl animate-on-scroll">
             Produk yang telah ter-sertifikasi POSTEL oleh PT. Furuno Electric Indonesia
-        </p>
+        </h2>
 
         <div class="overflow-x-auto">
             <div class="table-container animate-on-scroll">
