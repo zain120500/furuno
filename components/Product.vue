@@ -24,7 +24,7 @@
                     <!-- Repeatable card items -->
                     <div v-for="item of product" class="card bg-base-100 w-56 sm:w-80 shadow-xl pt-5">
                         <figure>
-                            <img :src="`_nuxt/${item.img}`" class="max-h-[200px]" :alt="item.title" />
+                            <img :src="`/image/${item.img}`" class="max-h-[200px]" :alt="item.title" />
                         </figure>
                         <div class="card-body mx-auto">
                             <h2 class="card-title">{{ item.title }}</h2>
