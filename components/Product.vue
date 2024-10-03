@@ -57,7 +57,7 @@
                     <!-- Dropdown Section with Animation -->
                     <transition name="slide">
                         <div v-if="isDropdownOpen" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden">
-                            <img v-for="image of activeItem.tipe1" :key="image" :src="`_nuxt/assets/image/${image}`"
+                            <img v-for="image of activeItem.tipe1" :key="image" :src="`/image/${image}`"
                                 class="hover:scale-125 hover:z-50 hover:shadow-xl hover:border-4 hover:border-[#0B2F9F] max-h-[300px] text-center mx-auto m-5"
                                 :alt="image" />
                         </div>
@@ -72,7 +72,7 @@
 
                     <transition name="slide">
                         <div v-if="isDropdownOpen2" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden">
-                            <img v-for="image of activeItem.tipe2" :key="image" :src="`_nuxt/assets/image/${image}`"
+                            <img v-for="image of activeItem.tipe2" :key="image" :src="`/image/${image}`"
                                 class="hover:scale-125 hover:z-50 hover:shadow-xl hover:border-4 hover:border-[#0B2F9F] max-h-[300px] text-center mx-auto m-5"
                                 :alt="image" />
                         </div>
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                    <img v-for="image of activeItem.tipe" :src="`_nuxt/assets/image/${image}`"
+                    <img v-for="image of activeItem.tipe" :src="`/image/${image}`"
                         class="hover:scale-125 hover:z-50 hover:shadow-xl hover:border-4 hover:border-[#0B2F9F] max-h-[300px] text-center mx-auto m-5"
                         :alt="image" />
 
