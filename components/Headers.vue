@@ -1,9 +1,9 @@
 <template>
     <div class="navbar transition-all duration-300" :class="isScrolled ? ' sm:bg-base-100' : ' sm:bg-ghost'">
-        <div class="flex-1 ml-20">
-            <img src="~/assets/image/logo.png" class="w-[100px]" />
+        <div class="flex-1 lg:ml-20">
+            <img src="~/assets/image/logo.png" class="w-[200px]" />
         </div>
-        <div class="flex-none mr-20">
+        <div class="flex-none lg:mr-20">
             <ul class="menu menu-horizontal px-1">
                 <li><a :class="['font-semibold text-lg', isScrolled ? 'text-[#0B2F9F]' : 'text-white']"
                         class="hover:scale-125 hover:text-white hover:bg-[#0B2F9F]"
