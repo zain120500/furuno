@@ -95,7 +95,7 @@ const product = ref([
     {
         id: 1, title: 'MARINE RADAR', img: 'marineradar.png',
         tipe1: [
-            { img: '6b48508ba8f35ff6f33f3f9b25a32360.jpg', link: '' },
+            { img: '6b48508ba8f35ff6f33f3f9b25a32360.jpg', link: 'https://github.com/Pugindo/PGI-Gadai-Frontend' },
             { img: '3bd7046506be1915f425521682618fbc.jpg', link: '' },
             { img: '47124744dce910cf4f5efedac0b7a09d.jpg', link: '' },
             { img: '79b178a336e1f3077040c11e8f28233f.jpg', link: '' },
