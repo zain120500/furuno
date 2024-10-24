@@ -15,4 +15,9 @@ export default defineNuxtConfig({
   plugins: [
     '~/plugins/google-maps.js', // Daftarkan plugin Google Maps
   ],
+  runtimeConfig: {
+    public: {
+      logoUrl: process.env.NUXT_PUBLIC_LOGO_URL
+    }
+  }
 });

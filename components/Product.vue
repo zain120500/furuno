@@ -15,8 +15,10 @@
                         <div class="card-body mx-auto">
                             <h2 class="card-title">{{ item.title }}</h2>
                             <div class="card-actions justify-center">
+                                <!-- <button class="btn bg-[#0B2F9F] hover:scale-125 hover:bg-[#0B2F9F] text-white"
+                                    @click="modalToggle('my_modal_1', item)">Lihat</button> -->
                                 <button class="btn bg-[#0B2F9F] hover:scale-125 hover:bg-[#0B2F9F] text-white"
-                                    @click="modalToggle('my_modal_1', item)">Lihat</button>
+                                    onclick="my_modal_1.showModal()" @click="() => { activeItem = item }">Lihat</button>
                             </div>
                         </div>
                     </div>
@@ -37,11 +39,10 @@
                         </div>
                     </div>
 
-                    <!-- Dropdown Section with Animation -->
                     <transition name="slide">
                         <div v-if="isDropdownOpen" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden">
                             <a :href="image.link" target="_blank" v-for="image of activeItem.tipe1">
-                                <img v-for="image of activeItem.tipe1" :key="image" :src="`/image/${image.img}`"
+                                <img :key="image" :src="`/image/${image.img}`"
                                     class="hover:scale-125 hover:z-50 hover:shadow-xl hover:border-4 hover:border-[#0B2F9F] max-h-[300px] text-center mx-auto m-5"
                                     :alt="image" />
                             </a>
@@ -80,10 +81,13 @@
 
                 <div class="modal-action">
                     <form method="dialog">
-                        <button class="btn" @click="modalToggle('my_modal_1')">Close</button>
+                        <button class="btn" onclick="my_modal_1.hideModal()">Close</button>
                     </form>
                 </div>
             </div>
+            <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+            </form>
         </dialog>
     </div>
 </template>

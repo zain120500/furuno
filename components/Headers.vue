@@ -1,32 +1,20 @@
 <template>
     <div class="navbar transition-all duration-300" :class="isScrolled ? ' sm:bg-base-100' : ' sm:bg-ghost'">
         <div class="flex-1 lg:ml-20">
-            <img src="~/assets/image/logo.png" class="w-[200px]" />
+            <img :src="`/image/${logoUrl}`" class="w-[200px]" />
         </div>
         <div class="flex-none lg:mr-20">
             <ul class="menu menu-horizontal px-1">
-                <li><a :class="['font-semibold text-lg', isScrolled ? 'text-[#0B2F9F]' : 'text-white']"
-                        class="hover:scale-125 hover:text-white hover:bg-[#0B2F9F]"
-                        @click="scrollToSection('about')">About</a></li>
-                <li><a :class="['font-semibold text-lg', isScrolled ? 'text-[#0B2F9F]' : 'text-white']"
-                        class="hover:scale-125 hover:text-white hover:bg-[#0B2F9F]"
-                        @click="scrollToSection('product')">Product</a></li>
-                <li><a :class="['font-semibold text-lg', isScrolled ? 'text-[#0B2F9F]' : 'text-white']"
-                        class="hover:scale-125 hover:text-white hover:bg-[#0B2F9F]"
-                        @click="scrollToSection('service')">Service</a></li>
-                <li><a :class="['font-semibold text-lg', isScrolled ? 'text-[#0B2F9F]' : 'text-white']"
-                        class="hover:scale-125 hover:text-white hover:bg-[#0B2F9F]"
-                        @click="scrollToSection('certifPostel')">Sertifikat Postel</a></li>
-                <li><a :class="['font-semibold text-lg', isScrolled ? 'text-[#0B2F9F]' : 'text-white']"
-                        class="hover:scale-125 hover:text-white hover:bg-[#0B2F9F]"
-                        @click="scrollToSection('contact')">Contact</a></li>
+                <li v-for="item of menu"><a :class="['font-semibold text-lg', isScrolled ? 'text-[#0B2F9F]' : 'text-white']"
+                        class="hover:scale-125 hover:text-white hover:bg-[#0B2F9F]" @click="scrollToSection(item.link)">{{
+                            item.name }}</a></li>
             </ul>
         </div>
     </div>
 
     <div class="sm:hidden navbar transition-all duration-300 bg-base-100">
         <div class="flex-1 ">
-            <img src="~/assets/image/logo.png" class="w-[100px]" />
+            <img :src="`/image/${logoUrl}`" class="w-[100px]" />
         </div>
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1">
@@ -55,27 +43,27 @@
 
         <div class="top-0 p-3">
             <div class="grid grid-rows-5 gap-5 text-left mt-5">
-                <button class="font-semibold text-white hover:scale-125" @click="scrollToSection('about')">About</button>
-                <button class="font-semibold text-white hover:scale-125"
-                    @click="scrollToSection('product')">Product</button>
-                <button class="font-semibold text-white hover:scale-125"
-                    @click="scrollToSection('service')">Service</button>
-                <button class="font-semibold text-white hover:scale-125" @click="scrollToSection('certifPostel')">Sertifikat
-                    Postel</button>
-                <button class="font-semibold text-white hover:scale-125"
-                    @click="scrollToSection('contact')">Contact</button>
+                <button v-for="item of menu" class="font-semibold text-white hover:scale-125"
+                    @click="scrollToSection(item.link)">{{ item.name }}</button>
             </div>
         </div>
-
     </div>
 </template>
 
 <script>
+
 export default {
     data() {
         return {
             isScrolled: false,
-            sideBar: false
+            sideBar: false,
+            menu: [
+                { name: 'About Us', link: 'about' },
+                { name: 'Product', link: 'product' },
+                { name: 'Service', link: 'service' },
+                { name: 'Contact', link: 'contact' },
+            ],
+            logoUrl: this.$config.public.logoUrl
         };
     },
     mounted() {
@@ -86,12 +74,14 @@ export default {
             this.isScrolled = window.scrollY > 0;
         },
         scrollToSection(sectionId) {
-            this.sideBar = false
+            this.sideBar = false;
             const element = document.getElementById(sectionId);
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                const yOffset = -100;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
             }
-        },
+        }
     },
     beforeDestroy() {
         window.removeEventListener("scroll", this.handleScroll);

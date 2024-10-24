@@ -17,7 +17,8 @@
                 dolore
                 magna aliqua.
             </p>
-            <button class="btn btn-primary  hover:scale-125 mt-5 fade-in-delay " @click="scrollToSection('about')">Read More></button>
+            <button class="btn btn-primary  hover:scale-125 mt-5 fade-in-delay " @click="scrollToSection('about')">Read
+                More></button>
         </div>
     </div>
 
@@ -36,6 +37,7 @@ import Product from '~/components/Product.vue';
 import Service from '~/components/Service.vue';
 import CertifPostel from '~/components/CertifPostel.vue';
 import Contact from '~/components/Contact.vue';
+import axios from 'axios'
 // import { ref } from 'vue';
 // const selectedTab = ref<number>(2); 
 
@@ -48,9 +50,33 @@ const scrollToSection = (id) => {
     }
 }
 
-onMounted(() => {
+let config = {
+    method: 'get',
+    maxBodyLength: Infinity,
+    url: 'https://www.mmobomb.com/api1/games?platform=pc',
+    headers: {}
+};
+
+
+
+onMounted(async () => {
     window.scrollTo(0, 0);
-    }
+    const requestOptions = {
+        method: "GET",
+        redirect: "follow"
+    };
+
+    axios.request(config)
+        .then((response) => {
+            console.log(response);
+            console.log(JSON.stringify(response.data));
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+
+}
 )
 </script>
 

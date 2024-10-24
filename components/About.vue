@@ -4,7 +4,7 @@
 
         <div class="sm:grid sm:grid-cols-2 sm:items-center gap-2">
             <div class="animate-on-scroll">
-                <img src="~/assets/image/logo.png" class="w-[400px] mx-auto my-3" />
+                <img :src="`/image/${logoUrl}`" class="w-[400px] mx-auto my-3" />
                 <p class=" md:text-xl lg:text-2xl">
                     <strong>PT FURUNO ELECTRIC INDONESIA</strong> didirikan pada Tahun 2016, sebagai anak perusahaan dari
                     <strong>FURUNO SINGAPORE PTE., LTD</strong> dan <strong>FURUNO ELECTRIC CO., LTD.</strong> untuk
@@ -79,7 +79,8 @@
 
 <script setup>
 import { onMounted } from 'vue';
-
+const config = useRuntimeConfig()
+const logoUrl = config.public.logoUrl
 onMounted(() => {
     const elements = document.querySelectorAll('.animate-on-scroll');
 
