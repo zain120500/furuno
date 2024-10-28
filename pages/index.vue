@@ -68,7 +68,6 @@ onMounted(async () => {
 
     axios.request(config)
         .then((response) => {
-            console.log(response);
             console.log(JSON.stringify(response.data));
         })
         .catch((error) => {
